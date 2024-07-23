@@ -171,8 +171,12 @@ header img{
 
    .Button__container {
     justify-content: center;
-    flex-wrap: wrap;
-   
+    flex-wrap: wrap;   
    }
+   .result_text{
+    margin-bottom: 0;
+    align-items: center;
+    }
+   
 }
 
