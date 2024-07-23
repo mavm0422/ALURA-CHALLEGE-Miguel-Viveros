@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Mesajes</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="./assets/IMG/LogoLogo Alura.svg" alt="Logo Alura">
+    </header>
+    <main>
+        <form class="form__section" onsubmit="return false;">
+            <textarea id="inputText" name="Texto" class="form__input" placeholder="Ingrese el texto aqui"></textarea>
+            <div class="Container">
+                <div class="alert_info">
+                    <img src="./assets/IMG/Alert Info.svg" alt="Icon Alert">
+                    <span>Solo letras minúsculas y sin acentos</span>
+                </div>
+                <div class="Button__container">
+                    <button type="button" onclick="encryptText()" class="Button_primary">Encriptar</button>
+                    <button type="button" onclick="decryptText()" class="Button_secundary">Desencriptar</button>
+                </div>
+            </div>
+        </form>
+        
+        <aside id="result"  class="result">
+            <div id="resultText">
+                <img src="./assets/Muñeco Not message found.png" alt="No message found img" class="result__img">
+                <div class="result__container">            
+                <h3 class="result__title" >Ningún mensaje fue encontrado</h3>
+                <p class="result__paragrah">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </div>
+                <button onclick="copyToClipboard()" class="Button_secundary hidden">Copiar
+                </button>
+                
+         </aside>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
