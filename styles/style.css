@@ -156,6 +156,9 @@ header img{
       flex-direction: column;
     }
     .result{
+        display: flex;
+        justify-content: center; /* Centrar horizontalmente */
+        align-items: center;
         max-width: 100%;
         width: 100%;
         min-width: fit-content;
@@ -175,7 +178,10 @@ header img{
    }
    .result_text{
     margin-bottom: 0;
-    align-items: center;
+    justify-content: center;
+    }
+    .copy_button{
+        align-items: center;
     }
    
 }

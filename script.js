@@ -1,4 +1,3 @@
-// script.js
 
 document.addEventListener('DOMContentLoaded', () => {
     const encryptButton = document.querySelector('.Button_primary');
@@ -6,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultAside = document.getElementById('result');
     const resultText = document.getElementById('resultText');
     const copyButton = resultAside.querySelector('button');
+    const textarea = document.getElementById('inputText');
 
     encryptButton.addEventListener('click', function(event) {
         event.preventDefault();
@@ -21,6 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         copyToClipboard();
     });
+
+    textarea.addEventListener('input', function() {
+        this.value = removeAccents(this.value.toLowerCase());
+    });
+
+    function removeAccents(str) {
+        return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    }
 });
 
 function encryptText() {
@@ -62,3 +70,4 @@ function copyToClipboard() {
         console.error('Error al copiar al portapapeles: ', err);
     });
 }
+
